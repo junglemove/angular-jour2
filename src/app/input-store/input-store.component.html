@@ -1,12 +1,12 @@
 
   <app-input-product (onSubmit)="onAddProduct($event)"></app-input-product>
 		<table class="table table-bordered table-hover" >
-			<tr class="success">
+			<tr class="warning">
 				<td>NAME</td>
 				<td>PRICE</td>
 				<td>TYPE</td>
 			</tr>
-			<tr *ngFor="let product of products">
+			<tr *ngFor="let product of products" (click)="onElemClicked(product)" [ngClass]="getProductClass(product)">
 				<td>{{ product.name }}</td>
 				<td>{{ product.price }}</td>
 				<td>{{ product.type }}</td>

@@ -16,7 +16,7 @@ export class InputProductComponent implements OnInit {
   //Event emitter from angular, templated on string (can only emit string)
   @Output() onSubmit = new EventEmitter();
 
-  onAddProduct(name: string, price:string, type:string){
+  submitSelectedProduct(name: string, price:string, type:string){
     let product:IProduct = new Product(name, Number.parseInt(price), type);
     this.onSubmit.emit(product);
   }
