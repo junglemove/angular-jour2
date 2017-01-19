@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core'
 import { Foo } from './DIFail/fail'
 import { Order } from './data/order'
-import { Product } from './data/product'
+import { Product, IProduct } from './data/product'
 import { Restaurant } from './data/restaurant'
 import { Store } from './data/store'
 
@@ -15,7 +15,7 @@ import { Store } from './data/store'
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  	@Input() private products:Product[];
+  	private products:Product[];
 
 	message = 'Bonjour !'
 	mySize = 42
@@ -25,6 +25,14 @@ export class AppComponent {
 
 	onOrder(order: Order, isReady: boolean, message: string){
 		console.log('onOrder', order, isReady, message)
+	}
+
+	onAddProduct(product:IProduct){
+		this.products.push(product);
+		console.log("****** HANDLED BY app-component *******");
+		for(var i=0; i<this.products.length ; i++){
+			console.log("Name: "+ this.products[i].name);
+		}
 	}
 
 	onClick(value: string){

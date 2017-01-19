@@ -1,6 +1,15 @@
 
-  input-store works!
   <app-input-product (onSubmit)="onAddProduct($event)"></app-input-product>
-	<div *ngFor="let x of products">
-		{{ x.name }}
-	</div>
+		<table class="table" >
+			<tr>
+				<td>NAME</td>
+				<td>PRICE</td>
+				<td>TYPE</td>
+			</tr>
+			<tr *ngFor="let product of products">
+				<td>{{ product.name }}</td>
+				<td>{{ product.price }}</td>
+				<td>{{ product.type }}</td>
+			</tr>
+		</table>
+
