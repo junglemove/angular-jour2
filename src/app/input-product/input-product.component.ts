@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Product } from '../data/product';
+import { Product, IProduct } from '../data/product';
 
 @Component({
   selector: 'app-input-product',
@@ -8,26 +8,17 @@ import { Product } from '../data/product';
 })
 export class InputProductComponent implements OnInit {
 
-  private products:Product[] = [];
-
-  @Input() name: string;
-  @Input() price: string;
-  @Input() type: string;
-
   constructor() { }
 
   ngOnInit() {
   }
 
   //Event emitter from angular, templated on string (can only emit string)
-  @Output() onSubmit = new EventEmitter()
-  i = 0;
+  @Output() onSubmit = new EventEmitter();
 
-  onClick(name: string, price:string, type:string){
-    this.products.push(new Product(name, Number.parseInt(price), type));
-    for(var i=0; i<this.products.length ; i++){
-        console.log("Name: "+ this.products[i].name);
-    }
+  onAddProduct(name: string, price:string, type:string){
+    let product:IProduct = new Product(name, Number.parseInt(price), type);
+    this.onSubmit.emit(product);
   }
 
 }

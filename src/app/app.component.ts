@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input } from '@angular/core'
 import { Foo } from './DIFail/fail'
 import { Order } from './data/order'
 import { Product } from './data/product'
@@ -15,7 +15,7 @@ import { Store } from './data/store'
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  	private products:Product[];
+  	@Input() private products:Product[];
 
 	message = 'Bonjour !'
 	mySize = 42
