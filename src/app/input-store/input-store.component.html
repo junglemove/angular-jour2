@@ -8,8 +8,7 @@
 			</tr>
 			<tr *ngFor="let product of products" (click)="onElemClicked(product)" [ngClass]="getProductClass(product)">
 				<td>{{ product.name }}</td>
-				<td>{{ product.price }}</td>
+				<td>{{ product.price | devise}}</td>
 				<td>{{ product.type }}</td>
 			</tr>
 		</table>
-
