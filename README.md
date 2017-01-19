@@ -79,3 +79,5 @@ selector:
 ##
 EventEmitter: gestion async des evenements
 
+##Debug with webpack:
+Map files in webpack//./src/app

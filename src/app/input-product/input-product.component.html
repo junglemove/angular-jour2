@@ -1,3 +1,14 @@
 <p>
   input-product works!
 </p>
+<div>
+  <br>
+  Name:<input #name>
+  <br>
+  Price:<input #price>
+  <br>
+  Type:<input #type>
+  <br>
+<button (click)="onClick(name.value, price.value, type.value)">Add product</button>
+</div>
+<div>

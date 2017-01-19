@@ -15,6 +15,8 @@ import { Store } from './data/store'
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  	private products:Product[];
+
 	message = 'Bonjour !'
 	mySize = 42
 	order = new Order('order 1', [new Product('name', 42)], this.onOrder)
