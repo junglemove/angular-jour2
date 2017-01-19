@@ -20,5 +20,5 @@
 <div>
 	<button (click)="clearAll()" class="btn btn-default">CLEAR</button>
 	<button (click)="clearSelection()" class="btn btn-default" [disabled]="selectedProducts.length == 0">CLEAR SELECTION</button>
-	<button HighlightRemoveDirective (click)="removeSelected()" class="btn btn-default">REMOVE</button>
+	<button appHighlightRemove (click)="removeSelected()" class="btn btn-default">REMOVE</button>
 </div>
