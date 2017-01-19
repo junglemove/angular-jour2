@@ -8,14 +8,15 @@ import { Product, IProduct } from '../data/product';
 })
 export class InputStoreComponent implements OnInit {
 
-  public bindTest = "test with binding";
+  private bindTest = "test with binding";
+  private lastSelectedProduct:Product = new Product("newProduct",123,"TYPE");
 
-  public products:Product[] = [
+  private products:Product[] = [
     new Product("AA",123,"AA"),
     new Product("ZZ",123,"ZZ"),
     new Product("EE",123,"EE")
   ];
-  public selectedProducts:Product[] = [];
+  private selectedProducts:Product[] = [];
 
   constructor() { }
 
@@ -33,8 +34,10 @@ export class InputStoreComponent implements OnInit {
   onElemClicked(product:Product){
     if(this.selectedProducts.find(p => p.id == product.id))
         this.selectedProducts.splice(this.selectedProducts.findIndex(p => p.id == product.id),1)
-    else
+    else{
         this.selectedProducts.push(product);
+        this.lastSelectedProduct = product;
+    }
   }
 
   getProductClass(product:Product){

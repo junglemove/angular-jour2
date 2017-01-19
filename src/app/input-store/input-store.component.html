@@ -1,4 +1,4 @@
-<app-input-product (onSubmit)="onAddProduct($event)">
+<app-input-product [newProduct]="lastSelectedProduct" (onSubmit)="onAddProduct($event)">
 </app-input-product>
 <div *ngIf="false">
 	<input [(ngModel)]="bindTest">

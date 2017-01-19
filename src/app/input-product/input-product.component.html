@@ -3,11 +3,11 @@
 </h1>
 <form>
   <br>
-  Name:<input class="form-control" #name>
+  Name:<input class="form-control" #name>{{newProduct.name}}
   <br>
-  Price:<input class="form-control" #price>
+  Price:<input class="form-control" #price>{{newProduct.price}}
   <br>
-  Type:<input class="form-control" #type>
+  Type:<input class="form-control" #type>{{newProduct.type}}
   <br>
   <div>
   <button (click)="submitSelectedProduct(name.value, price.value, type.value)" class="btn btn-default">Add product</button>

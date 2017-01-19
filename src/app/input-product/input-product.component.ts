@@ -8,10 +8,14 @@ import { Product, IProduct } from '../data/product';
 })
 export class InputProductComponent implements OnInit {
 
+  
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  @Input() private newProduct:Product;
 
   //Event emitter from angular, templated on string (can only emit string)
   @Output() onSubmit = new EventEmitter();
