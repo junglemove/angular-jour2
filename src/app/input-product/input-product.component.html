@@ -1,5 +1,5 @@
 <h1>
-  input-product works!
+  Input-product
 </h1>
 <form>
   <br>
@@ -9,5 +9,7 @@
   <br>
   Type:<input class="form-control" #type>
   <br>
-  <button (click)="submitSelectedProduct(name.value, price.value, type.value)">Add product</button>
+  <div>
+  <button (click)="submitSelectedProduct(name.value, price.value, type.value)" class="btn btn-default">Add product</button>
+ </div>
 </form>

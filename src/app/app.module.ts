@@ -13,6 +13,7 @@ import { HighlightDirective } from './highlight.directive';
 import { InputProductComponent } from './input-product/input-product.component';
 import { InputStoreComponent } from './input-store/input-store.component';
 import { DevisePipe } from './Pipes/devise.pipe';
+import { HighlightRemoveDirective } from './Directives/highlight-remove.directive';
 
 @Injectable()
 export class Test{
@@ -30,7 +31,8 @@ export class Test{
     HighlightDirective,
     InputProductComponent,
     InputStoreComponent,
-    DevisePipe
+    DevisePipe,
+    HighlightRemoveDirective
   ],
   imports: [
     BrowserModule,
