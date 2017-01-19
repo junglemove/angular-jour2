@@ -1,14 +1,13 @@
 <h1>
   input-product works!
 </h1>
-<div>
+<form>
   <br>
-  Name:<input #name>
+  Name:<input class="form-control" #name>
   <br>
-  Price:<input #price>
+  Price:<input class="form-control" #price>
   <br>
-  Type:<input #type>
+  Type:<input class="form-control" #type>
   <br>
   <button (click)="submitSelectedProduct(name.value, price.value, type.value)">Add product</button>
-</div>
-<div>
+</form>

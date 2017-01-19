@@ -1,14 +1,21 @@
+<app-input-product (onSubmit)="onAddProduct($event)">
+</app-input-product>
 
-  <app-input-product (onSubmit)="onAddProduct($event)"></app-input-product>
-		<table class="table table-bordered table-hover" >
-			<tr class="warning">
-				<td>NAME</td>
-				<td>PRICE</td>
-				<td>TYPE</td>
-			</tr>
-			<tr *ngFor="let product of products" (click)="onElemClicked(product)" [ngClass]="getProductClass(product)">
-				<td>{{ product.name }}</td>
-				<td>{{ product.price | devise}}</td>
-				<td>{{ product.type }}</td>
-			</tr>
-		</table>
+<table class="table table-bordered table-hover">
+	<tr class="warning">
+		<td>NAME</td>
+		<td>PRICE</td>
+		<td>TYPE</td>
+	</tr>
+	<tr *ngFor="let product of products" (click)="onElemClicked(product)" [ngClass]="getProductClass(product)">
+		<td>{{ product.name }}</td>
+		<td>{{ product.price | devise}}</td>
+		<td>{{ product.type }}</td>
+	</tr>
+</table>
+
+<div>
+	<button (click)="clearAll()" class="btn btn-default">CLEAR</button>
+	<button (click)="clearSelection()" class="btn btn-default">CLEAR SELECTION</button>
+	<button (click)="removeSelected()" class="btn btn-default">REMOVE</button>
+</div>

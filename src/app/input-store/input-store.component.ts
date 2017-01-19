@@ -39,4 +39,19 @@ export class InputStoreComponent implements OnInit {
     return (this.selectedProducts.find(p => p.id == product.id)) ? "highlightElem":"";
   }
 
+  clearAll(){
+    this.products = [];
+  }
+
+  clearSelection(){
+    this.selectedProducts = [];
+  }
+
+  removeSelected(){
+      for(let i=0; i<this.selectedProducts.length; i++){
+        let product = this.selectedProducts[i];
+        this.products.splice(this.products.findIndex(p => p.id == product.id),1);
+      }
+  }
+
 }
