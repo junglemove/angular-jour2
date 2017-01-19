@@ -12,7 +12,7 @@ import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { InputProductComponent } from './input-product/input-product.component';
 import { InputStoreComponent } from './input-store/input-store.component';
-import { DevisePipe } from './devise.pipe';
+import { DevisePipe } from './Pipes/devise.pipe';
 
 @Injectable()
 export class Test{
