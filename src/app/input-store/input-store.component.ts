@@ -8,6 +8,8 @@ import { Product, IProduct } from '../data/product';
 })
 export class InputStoreComponent implements OnInit {
 
+  public bindTest = "test with binding";
+
   public products:Product[] = [
     new Product("AA",123,"AA"),
     new Product("ZZ",123,"ZZ"),

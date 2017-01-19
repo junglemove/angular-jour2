@@ -1,6 +1,9 @@
 <app-input-product (onSubmit)="onAddProduct($event)">
 </app-input-product>
-
+<div>
+	<input [(ngModel)]="bindTest">
+	{{ bindTest }}
+</div>
 <table class="table table-bordered table-hover">
 	<tr class="warning">
 		<td>NAME</td>
