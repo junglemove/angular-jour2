@@ -12,6 +12,7 @@ import { FormComponent } from './form/form.component';
 import { HighlightDirective } from './highlight.directive';
 import { InputProductComponent } from './input-product/input-product.component';
 import { InputStoreComponent } from './input-store/input-store.component';
+import { DevisePipe } from './devise.pipe';
 
 @Injectable()
 export class Test{
@@ -28,7 +29,8 @@ export class Test{
     FormComponent,
     HighlightDirective,
     InputProductComponent,
-    InputStoreComponent
+    InputStoreComponent,
+    DevisePipe
   ],
   imports: [
     BrowserModule,
